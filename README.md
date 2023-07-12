@@ -2,7 +2,8 @@
 
 # Dental Diseases Detector
 A Flutter app that detects a dental diseases given either an panoramic x-ray or normal images.
-
+# DEMO
+ https://drive.google.com/file/d/1Z4Q9t0MZT02TbLyZCGbBsSAxLZqTmor8/view?usp=sharing
 
 ## Requirements
 - Any operating System (ie. MacOS X, Linux, Windows)
