@@ -1,16 +1,54 @@
 # idental
 
-A new Flutter project.
+# Dental Diseases Detector
+A Flutter app that detects a dental diseases given either an panoramic x-ray or normal images.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Requirements
+- Any operating System (ie. MacOS X, Linux, Windows)
+- Any IDE with latest Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
+- A little knowledge of Dart and Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+## Additional Info
+Packages used include: tflite, pytorch, image_picker, provider,flutter_local_notification, flutter bloc , firebase_core, firebase_messaging.
+Model used and labels file are found in the <i>assets/model</i> folder. 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
+A Flutter installation is required to run this project.
+To install Flutter, visit the official installation [documentation](https://docs.flutter.dev/get-started/install).
+Set up an editor of choice as specified [here](https://docs.flutter.dev/get-started/editor).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+```
+
+Run the below command inside the project directory to install necessary packages.
+```bash
+flutter pub get
+```
+To run the project in debug mode 
+```bash
+flutter run
+```
+To generate a release build
+```bash
+flutter build apk
+```
+Locate the `app-release.apk` file from the directory `build/app/outputs/flutter-apk/` and install in your Android smartphone or emulator to use.
+
+## Usage
+
+On launching the application, you will be able to select one dental disease from the available dental diseases, then take a photo , or select a photo from your gallery.
+
+The application then runs the TFLITE model in the background to get the diagnosis result.
+
+
+## Important to note
+- The `periodontal tflite` model has been trained to detect panoramic x-ray images and label it as periodontal or non periodontal
+- The `Oral cancer tflite` model has been trained to detect normal images and label it as cancer or non cancer
+- The `Multi disease pytorch` model has been trained to detect panoramic x-ray images and label it as 
+  - cavity
+  - infected teeth
+  - impacted teeth
+  - filling
+  - implant
+    
